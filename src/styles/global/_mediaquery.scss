@@ -1,0 +1,25 @@
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1366px,
+);
+
+@mixin mq($size) {
+  @media screen and (min-width: #{map-get($breakpoints, $size)}) {
+    @content;
+  }
+}
+
+@mixin mq_custom($breakPoint) {
+  @media (min-width: $breakPoint) {
+    @content;
+  }
+}
+
+@mixin mq_hover {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}

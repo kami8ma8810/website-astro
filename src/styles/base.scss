@@ -1,0 +1,32 @@
+@use "src/styles/global" as *;
+
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  font-family: $f_yuGothic, sans-serif;
+  font-size: remUnit(16);
+  line-height: 1;
+  color: $c_black;
+  overflow-wrap: break-word;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* stylelint-disable */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  // Google Chrome
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+/* stylelint-enable */
